@@ -5,14 +5,16 @@
     --main-hyperlink-color: #80c8f4;
 }
 
+
 html {
-    height: 100%;
+    height: auto;%;
     margin: 0;
 }
 
 body {
-    height: 100%;
-    margin: 0;
+    height: auto%;
+    width: auto;
+    margin: 0px;
     background-color: var(--main-bg-color);
     background-size: auto;
     color: var(--main-text-color);
@@ -25,7 +27,7 @@ div {
 }
 
 .container {
-    height: 100%;
+    height: auto%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +47,8 @@ h2 {
     /*background-color: cornflowerblue;*/
 }
 .header-container{
-    padding: 200px 0px 0px 0px;
+    height: auto%;
+    padding: 100px 0px 0px 0px;
 }
 
 .logo-top {
@@ -53,8 +56,8 @@ h2 {
 }
 
 .mascot {
-    width: 400px;
-    height: 400px;
+    width: 40%;
+    height: 40%;
 }
 
 .body-content{
@@ -62,12 +65,12 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding: 50px;
 /*    border: solid;*/
 }
 
 .content {
-    margin: 30px;
+    margin: 0%;
+    padding: 3%;
     color: var(--main-text-color-alt);
 /*    border: solid;*/
 /*    background-color: cornflowerblue;*/
@@ -77,6 +80,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 15px;
+    padding: 5%;
 }
 
 a {
@@ -93,12 +97,27 @@ a {
 }
 
 
-
 @media only screen and (max-width: 450px) {
-
+/*mobile only*/
+    h1 {
+    font-size: 2.5em;
+    /*background-color: cornflowerblue;*/
+    }   
+    .container{
+        padding: 0px;
+    }
     .mascot{
-        width: 350px;
+        width: 90%;
         height: auto;
     }
+
+/* 
+common breakpoints for widths of devices  
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV 
+*/
 
 }
