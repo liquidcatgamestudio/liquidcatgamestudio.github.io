@@ -68,9 +68,13 @@ a {
 
 }
 
+.header{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+}
+
 .mascot {
     width: 400px;
     height: 400px;
-    display: flex;
-    flex-direction: column;
 }
