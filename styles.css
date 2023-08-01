@@ -44,6 +44,18 @@ h2 {
     /*font-size: 1.5em;*/
     /*background-color: cornflowerblue;*/
 }
+.header-container{
+    padding: 200px 0px 0px 0px;
+}
+
+.logo-top {
+    margin: 10px;
+}
+
+.mascot {
+    width: 400px;
+    height: 400px;
+}
 
 .body-content{
     display: flex;
@@ -80,7 +92,13 @@ a {
     align-content: center;
 }
 
-.mascot {
-    width: 400px;
-    height: 400px;
+
+
+@media only screen and (max-width: 450px) {
+
+    .mascot{
+        width: 350px;
+        height: auto;
+    }
+
 }
