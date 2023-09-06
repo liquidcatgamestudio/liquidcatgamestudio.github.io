@@ -3,17 +3,20 @@
     --main-text-color: #ffffff;
     --main-text-color-alt: #8c8a90;
     --main-hyperlink-color: #80c8f4;
+    --main-nav-bar-color: #04002b;
+    --main-nav-bar-color-alt: #fff;
+    --main-nav-bar-color-active: #9ec4e8;
 }
 
 
 html {
-    height: auto;%;
+    height: auto;
     margin: 0;
 }
 
 body {
-    height: auto%;
-    width: auto;
+    height: auto;
+    width: 100%;
     margin: 0px;
     background-color: var(--main-bg-color);
     background-size: auto;
@@ -27,7 +30,7 @@ div {
 }
 
 .container {
-    height: auto%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,7 +50,7 @@ h2 {
     /*background-color: cornflowerblue;*/
 }
 .header-container{
-    height: auto%;
+    height: auto;
     padding: 100px 0px 0px 0px;
 }
 
@@ -59,6 +62,41 @@ h2 {
     width: 40%;
     height: 40%;
 }
+
+ul.nav-bar-ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-nav-bar-color);
+    text-align:center;
+    overflow: hidden;
+}
+
+ul.nav-bar-ul li {
+    float: left;
+    width: 25%;
+}
+
+ul.nav-bar-ul li a {
+    display: block;
+    color: var(--main-text-color);
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+
+ul.nav-bar-ul li a.active {
+
+  background-color: var(--main-nav-bar-color-active);
+  color: var(--main-nav-bar-color);
+
+}
+
+ul.nav-bar-ul li a:hover:not(.active) {
+    background-color: var( --main-nav-bar-color-alt);
+    color: black;
+}      
+
 
 .body-content{
     display: flex;
@@ -111,6 +149,17 @@ a {
         height: auto;
     }
 
+    ul.nav-bar-ul li {
+        float: none;
+        width: 90%;
+    }   
+
+    ul.nav-bar-ul li a {
+        width: 100%;
+    }
+    /* Change the link color on hover */
+
+   
 /* 
 common breakpoints for widths of devices  
 320px — 480px: Mobile devices
