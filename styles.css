@@ -128,23 +128,25 @@ ul.nav-bar-ul li a:hover:not(.active) {
 
 .project-cards-container {
     background-color: var(--main-nav-bar-color);
-    padding: 3%;
+    padding: 1%;
     display: flex;
     /* flex-direction: row; */
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
 }
 
 .project-card {
     background-color: var(--main-nav-bar-color-active);
-    width: 30%;
-    margin: 3%;
+    width: 25%;
+    max-width: 300px;
+    min-width: 350px;
+    margin: 1%;
     padding: 3%;
-    
 }
 
 .project-card #game-name {
-    font-size: 5vw;
+    font-size: 3vw;
     color: var(--main-bg-color);
 }
 
@@ -160,7 +162,7 @@ ul.nav-bar-ul li a:hover:not(.active) {
 }
 .project-card-button a{
     width: 100%;
-    font-size: 3vw;
+    font-size: 2vw;
     color: var(--main-text-color);
     text-decoration: none;
 }
@@ -213,6 +215,13 @@ a {
     }
     /* Change the link color on hover */
 
+    .project-card #game-name {
+        font-size: 10vw;
+    }
+
+    .project-card-button a{
+        font-size: 10vw;
+    }
    
 /* 
 common breakpoints for widths of devices  
