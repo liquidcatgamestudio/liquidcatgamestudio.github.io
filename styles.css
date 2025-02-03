@@ -140,17 +140,25 @@ ul.nav-bar-ul li a:hover:not(.active) {
     width: 30%;
     margin: 3%;
     padding: 3%;
-   
+    
+}
+
+.project-card #game-name {
+    font-size: 5vw;
+    color: var(--main-bg-color);
 }
 
 .project-card-button {
     background-color: var(--main-bg-color);
     border-radius: 10%;
-    padding: 5%;
-    color: var(--main-nav-bar-color);;
+    padding: 15%;
+    margin: 5%;
+    color: var(--main-nav-bar-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .project-card-button a{
-    display:inline-block;
     width: 100%;
     font-size: 3vw;
     color: var(--main-text-color);
