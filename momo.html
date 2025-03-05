@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Momo Art Mart Game</title>
+    <title>Momo Art Mart Game</title>
 	<style>
 		html,
 		body {
@@ -43,16 +43,19 @@
 </head>
 
 <body>
+	
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
-		<script src="BuildMomo/momo builds.loader.js"></script>
+		<!-- UPDATE Game path in src and gamePath constant -->
+		<script src='BuildMomo/MomoBuild.loader.js'></script>
 		<script>
+			const gamePath = 'BuildMomo/MomoBuild';
 			var canvas = document.querySelector("#unity-canvas");
             var container = canvas.parentElement;
 			var config = {
-				dataUrl: "BuildMomo/momo builds.data",
-				frameworkUrl: "BuildMomo/momo builds.framework.js",
-				codeUrl: "BuildMomo/momo builds.wasm",
+				dataUrl: `${gamePath}.data`,
+				frameworkUrl: `${gamePath}.framework.js`,
+				codeUrl: `${gamePath}.wasm`,
 				streamingAssetsUrl: "StreamingAssets",
                 companyName: "LiquidCatStudio",
                 productName: "Momo Art Mart Game",
