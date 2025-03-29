@@ -21,6 +21,7 @@ body {
     background-color: var(--main-bg-color);
     background-size: auto;
     color: var(--main-text-color);
+    font-size: 100%;
 }
 
 div {
@@ -38,9 +39,13 @@ div {
     /*gap: 10px;*/
 }
 
+/* .title-header {
+    
+} */
+
 h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 6vw;
     /*background-color: cornflowerblue;*/
 }
 
@@ -101,6 +106,7 @@ ul.nav-bar-ul li a:hover:not(.active) {
     color: black;
 }      
 
+/*=========================BODY CONTENT====================================*/
 
 .body-content{
     display: flex;
@@ -117,6 +123,52 @@ ul.nav-bar-ul li a:hover:not(.active) {
 /*    border: solid;*/
 /*    background-color: cornflowerblue;*/
 }
+
+/*===========================PROJECT================================*/
+
+.project-cards-container {
+    background-color: var(--main-nav-bar-color);
+    padding: 1%;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: var(--main-nav-bar-color-active);
+    width: 25%;
+    max-width: 300px;
+    min-width: 350px;
+    margin: 1%;
+    padding: 3%;
+}
+
+.project-card #game-name {
+    font-size: 3vw;
+    color: var(--main-bg-color);
+}
+
+.project-card-button {
+    background-color: var(--main-bg-color);
+    border-radius: 10%;
+    padding: 15%;
+    margin: 5%;
+    color: var(--main-nav-bar-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.project-card-button a{
+    width: 100%;
+    font-size: 2vw;
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+
+/*===========================footer================================*/
 
 .links-container {
     display: flex;
@@ -142,7 +194,7 @@ a {
 @media only screen and (max-width: 450px) {
 /*mobile only*/
     h1 {
-    font-size: 2.5em;
+    font-size: 20vw;
     /*background-color: cornflowerblue;*/
     }   
     .container{
@@ -163,6 +215,13 @@ a {
     }
     /* Change the link color on hover */
 
+    .project-card #game-name {
+        font-size: 10vw;
+    }
+
+    .project-card-button a{
+        font-size: 10vw;
+    }
    
 /* 
 common breakpoints for widths of devices  
