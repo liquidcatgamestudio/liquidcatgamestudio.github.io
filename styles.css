@@ -199,6 +199,21 @@ ul.nav-bar-ul li a:hover:not(.active) {
     text-decoration: none;
 }
 
+/*===========================Event full info page================================*/
+.event-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.info-banner{
+    width: 50%;
+    height: 100%;
+}
+.event-info-card{
+    width: 40%;
+}
 
 /*===========================footer================================*/
 
@@ -220,6 +235,21 @@ a {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    /* smaller screens */
+      /*====event info page======*/
+    .event-content{
+        flex-direction: column;
+    }
+    .info-banner{
+        width: 100%;
+    }
+
+    .event-info-card{
+        width: 100%;
+    }
 }
 
 
@@ -254,6 +284,9 @@ a {
     .project-card-button a{
         font-size: 10vw;
     }
+
+  
+
    
 /* 
 common breakpoints for widths of devices  
