@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1, text/html; charset=utf-8">
     <title>Momo Art Mart Game</title>
 	<style>
 		html,
@@ -49,10 +49,13 @@
 <body>
 	
 	<div id="gameContainer">
+		<!-- <button onclick="openFullscreen();">Open Video in Fullscreen Mode</button> -->
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
 		<div style="height:100%" id="myvideo">
-			<iframe id="html5game"  style="display:none; width: 100%; height: 100%; border:0; " src="https://gara-html-games-dev.s3.eu-west-3.amazonaws.com/masseka/12345/index.html" title="description"></iframe> 
+			<iframe id="html5game"  style="display:none; width: 100%; height: 100%; border:0; " src="/momo.html" title="description"></iframe> 
 		</div>
+
+	
 		<script>
 			var elem = document.getElementById("myvideo");
 			   
