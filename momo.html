@@ -50,6 +50,33 @@
 			height: 100%;
 			position: fixed;
 		}
+
+		selector:-webkit-full-screen {
+			display: block;
+			/* // displays the element only when in fullscreen */
+		}
+
+		selector {
+			display: none;
+			/* // hides the element when not in fullscreen mode */
+		}
+
+		@media (orientation: landscape) {
+			
+		}
+
+		@media (orientation: portrait) {
+			div#portrait-warning{
+				display: block;
+			}
+			div#gameContainer{
+				display: none;
+			}
+		}
+
+		@media (display-mode: fullscreen) {}
+
+		@media (display-mode: standalone) {}
 	</style>
 
 </head>
@@ -57,11 +84,17 @@
 <!-- <div data-iframe="<iframe allowtransparency=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; msallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share&quot; id=&quot;game_drop&quot; src=&quot;https://html-classic.itch.zone/html/11139311/index.html&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; scrolling=&quo -->
 
 <body>
-
+	<div id="portrait-warning"><p>Please be in landscape mode to play thee game!</p></div>
 	<div id="gameContainer">
 		<!-- <button onclick="openFullscreen();">Open Video in Fullscreen Mode</button> -->
-		
+
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
+
+		<script>
+			if (navigator.standalone == true) {
+				// My app is installed and therefore fullscreen
+			}	
+		</script>
 
 		<!-- UPDATE Game path in src and gamePath constant -->
 		<script src='BuildMomo/MomoBuild.loader.js'></script>
@@ -141,6 +174,8 @@
 				onResize();
 			});
 			onResize();
+
+
 
 		</script>
 	</div>
