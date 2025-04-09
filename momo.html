@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1, text/html; charset=utf-8">
-    <title>Momo Art Mart Game</title>
+    <meta name="mobile-web-app-capable" content="yes">
+	<title>Momo Art Mart Game</title>
 	<style>
 		html,
 		body {
@@ -43,7 +44,7 @@
 		
 	</style>
 </head>
-
+<!-- https://stackoverflow.com/questions/76527631/unity-webgl-how-to-force-fullscreen-on-mobile-device -->
 <!-- <div data-iframe="<iframe allowtransparency=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; msallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share&quot; id=&quot;game_drop&quot; src=&quot;https://html-classic.itch.zone/html/11139311/index.html&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; scrolling=&quo -->
 <body>
 	
@@ -51,7 +52,7 @@
 		<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
 		<div style="height:100%" id="myvideo">
-			<iframe id="html5game"  style="display:none; width: 100%; height: 100%; border:0; " src="/momo.html" title="Momo Game" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allow="autoplay; fullscreen *;" frameborder = "0" allowfullscreen = "true" scrolling="no"></iframe> 
+			<iframe id="html5game"  style="display:none; width: 100%; height: 100%; border:0; " src="/momo.html" title="Momo Game" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allow="autoplay; fullscreen *;" frameborder = "0" allowfullscreen = "true" scrolling="no"></iframe> 
 		</div>
 
 	
