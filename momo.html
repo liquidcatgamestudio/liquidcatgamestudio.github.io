@@ -66,7 +66,7 @@
 				/* border: 3px solid #73AD21; */
 			}
 
-		@media (orientation: landscape) {
+		@media (pointer: coarse) and (orientation: landscape) {
 			div#portrait-warning{
 				display: none;
 			}
@@ -75,7 +75,7 @@
 			}
 		}
 
-		@media (orientation: portrait) {
+		@media (pointer: coarse) and (orientation: portrait) {
 			div#portrait-warning{
 				display: flex;
 			}
@@ -87,13 +87,13 @@
 			}
 		}
 
-		@media (display-mode:fullscreen) {
+		@media (pointer: coarse) and (display-mode:fullscreen) {
 			div#download-app-ad{
 				display: none;
 			}
 		}
 
-		@media not (display-mode: standalone) {
+		@media (pointer: coarse) and (not (display-mode: standalone)) {
 			body{
 				display: flex;
 				overflow: auto;
@@ -130,6 +130,16 @@
 		@media (display-mode: standalone) {
 			div#download-app-ad{
 				display:none;
+			}
+		}
+
+		/* https://habr.com/en/sandbox/163605/ */
+		 {
+			div#portrait-warning{
+				display: none;
+			}
+			div#download-app-ad{
+				display: none;
 			}
 		}
 	</style>
