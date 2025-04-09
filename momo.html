@@ -5,8 +5,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" name="viewport"
 		content="width=device-width, initial-scale=1, text/html; charset=utf-8">
-	<!-- <meta name="mobile-web-app-capable" content="yes"> -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>Momo Art Mart Game</title>
+	<link rel="manifest" href="/manifest.json" />
 	<style>
 		html,
 		body {
@@ -47,6 +48,24 @@
 			position: fixed;
 		}
 	</style>
+
+	<style>
+		#goFS:-webkit-full-screen #goFS {
+			display: none;
+		}
+
+		#goFS:-moz-full-screen #goFS {
+			display: none;
+		}
+
+		#goFS:-ms-fullscreen #goFS {
+			display: none;
+		}
+
+		#goFS:fullscreen #goFS {
+			display: none;
+		}
+	</style>
 </head>
 <!-- https://stackoverflow.com/questions/76527631/unity-webgl-how-to-force-fullscreen-on-mobile-device -->
 <!-- <div data-iframe="<iframe allowtransparency=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; msallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share&quot; id=&quot;game_drop&quot; src=&quot;https://html-classic.itch.zone/html/11139311/index.html&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; scrolling=&quo -->
@@ -55,14 +74,18 @@
 
 	<div id="gameContainer">
 		<!-- <button onclick="openFullscreen();">Open Video in Fullscreen Mode</button> -->
+		
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
-		<div style="height:100%" id="myvideo">
+		
+		<button id="goFSs">Go Fullscreen game</button>
+
+		<!-- <div style="height:100%" id="myvideo"> -->
 			<!-- <iframe id="html5game"  style="display:none; width: 100%; height: 100%; border:0;  margin:0; padding:0; overflow:hidden; z-index:999999;" src="/momo.html" title="Momo Game" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allow="autoplay; fullscreen *;" frameborder = "0" allowfullscreen = "true" scrolling="no"></iframe>  -->
 			<!-- <iframe style = "display: block; border: none; height: 100vh; width: 100vw;"  src='/momo.html'; scrolling='no' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe> -->
 			<!-- <iframe src="/momo.html"
 				style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
 			</iframe> -->
-		</div>
+		<!-- </div> -->
 
 		<button id="goFS">Go fullscreen</button>
 		<script>
@@ -74,6 +97,47 @@
 				},
 				false,
 			);
+		</script>
+
+		<button id="goFSs">Go Fullscreen game</button>
+		<script>
+			var goFS = document.getElementById('goFSs');
+			goFS.addEventListener(
+				'click',
+				function () {
+					// var videoElement = document.getElementById('unity-canvas');
+					// videoElement.requestFullscreen();
+					//toggleFullScreen();
+					document.getElementById("gameContainer").requestFullscreen();
+				},
+				false,
+			);
+			function toggleFullScreen() {
+				var doc = window.document;
+				var docEl = doc.documentElement;
+
+				var requestFullScreen =
+					docEl.requestFullscreen ||
+					docEl.mozRequestFullScreen ||
+					docEl.webkitRequestFullScreen ||
+					docEl.msRequestFullscreen;
+				var cancelFullScreen =
+					doc.exitFullscreen ||
+					doc.mozCancelFullScreen ||
+					doc.webkitExitFullscreen ||
+					doc.msExitFullscreen;
+
+				if (
+					!doc.fullscreenElement &&
+					!doc.mozFullScreenElement &&
+					!doc.webkitFullscreenElement &&
+					!doc.msFullscreenElement
+				) {
+					requestFullScreen.call(docEl);
+				} else {
+					cancelFullScreen.call(doc);
+				}
+			}
 		</script>
 
 
@@ -99,7 +163,7 @@
 			}
 		</style>
 
-		
+
 
 		<!-- UPDATE Game path in src and gamePath constant -->
 		<script src='BuildMomo/MomoBuild.loader.js'></script>
@@ -173,6 +237,7 @@
 				canvas = instance.Module.canvas;
 				onResize();
 			});
+			window.scrollTo(0, 1);
 			window.addEventListener('resize', () => {
 				//window.location.reload();
 				onResize();
