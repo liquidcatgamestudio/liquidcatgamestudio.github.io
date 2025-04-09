@@ -66,7 +66,7 @@
 			/* border: 3px solid #73AD21; */
 		}
 
-		@media (pointer: coarse) and (orientation: landscape) {
+		@media (orientation: landscape) {
 			div#portrait-warning {
 				display: none;
 			}
@@ -74,9 +74,10 @@
 			div#game-window {
 				display: block;
 			}
+			
 		}
 
-		@media (pointer: coarse) and (orientation: portrait) {
+		@media ((pointer: coarse) and (orientation: portrait)) and (hover: none)  {
 			div#portrait-warning {
 				display: flex;
 			}
@@ -90,7 +91,7 @@
 			}
 		}
 
-		@media (pointer: coarse) and (display-mode:fullscreen) {
+		@media (display-mode:fullscreen) {
 			div#download-app-ad {
 				display: none;
 			}
@@ -135,33 +136,32 @@
 			}
 		}
 
+			/* https://habr.com/en/sandbox/163605/ */
+		/* mobile device */
+		@media (pointer: coarse) {
+			div#download-app-ad {
+				display: block;
+			}
+		}
 		@media (display-mode: standalone) {
 			div#download-app-ad {
 				display: none;
 			}
 		}
 
-		/* https://habr.com/en/sandbox/163605/ */
-		/* mobile device */
-		@media (pointer: coarse) {
+		@media (pointer: fine), (pointer: none), (hover: hover) {
+			/* desktop */
 			div#download-app-ad {
 				display: none;
 			}
 		}
 
-
-
-		/* @media (pointer: coarse)  { */
-		/* mobile device */
-		/* } */
-
-		/* @media (pointer: fine), (pointer: none) { */
-		/* desktop */
-		/* } */
-
-		/* @media (pointer: fine) and (any-pointer: coarse) { */
-		/* touch desktop */
-		/* } */
+		@media (pointer: fine) and (any-pointer: coarse) {
+			/* touch desktop */
+			div#download-app-ad {
+				display: none;
+			}
+		}		
 	</style>
 
 </head>
