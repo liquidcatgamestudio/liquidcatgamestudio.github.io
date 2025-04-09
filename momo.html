@@ -18,7 +18,7 @@
 			color: aliceblue;
 			width: 100%;
 			height: 100%;
-			overflow: visible;
+			overflow: hidden;
 			padding: 0;
 			margin: 0;
 		}
@@ -26,10 +26,9 @@
 		div#gameContainer {
 			background: transparent !important;
 			position: absolute;
-		}
-
-		div#gameContainer canvas {
-			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-self: center;
 		}
 
 		div#gameContainer canvas[data-pixel-art="true"] {
@@ -58,11 +57,20 @@
 			size: 5vw;
 		}
 
+		div#download-app-ad{
+				display: flex;
+				justify-content: center;
+				text-align: center;
+				width: 70%;
+				/* height: auto; */
+				/* border: 3px solid #73AD21; */
+			}
+
 		@media (orientation: landscape) {
 			div#portrait-warning{
 				display: none;
 			}
-			div#gameContainer{
+			div#game-window{
 				display: block;
 			}
 		}
@@ -71,14 +79,59 @@
 			div#portrait-warning{
 				display: flex;
 			}
-			div#gameContainer{
+			div#game-window{
+				display: none;
+			}
+			div#download-app-ad{
 				display: none;
 			}
 		}
 
-		@media (display-mode: fullscreen) {}
+		@media (display-mode:fullscreen) {
+			div#download-app-ad{
+				display: none;
+			}
+		}
 
-		@media (display-mode: standalone) {}
+		@media not (display-mode: standalone) {
+			body{
+				display: flex;
+				overflow: auto;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+			}
+			div#game-window{
+				display: block;
+			}
+			div#gameContainer{
+				position: unset;
+			}
+			div#download-app-ad{
+				position:absolute;
+				left: 0%;
+				right: 0%;
+				bottom: 0;
+				display: flex;
+				justify-content:center;
+				text-align:center;
+				width: 70%;
+				/* border: 3px solid red; */
+			}
+			.unity-mobile{
+				position: unset;
+				
+			}
+			div#gameContainer canvas[data-pixel-art="true"] {
+				position: unset;
+			}
+		}
+
+		@media (display-mode: standalone) {
+			div#download-app-ad{
+				display:none;
+			}
+		}
 	</style>
 
 </head>
@@ -87,15 +140,17 @@
 
 <body>
 	<div id="portrait-warning"><p>Please be in landscape mode to play the game!</p></div>
-	<div id="gameContainer">
+	<div id="game-window"><div id="gameContainer">
 		<!-- <button onclick="openFullscreen();">Open Video in Fullscreen Mode</button> -->
 
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
-
+		
 		<script>
 			if (navigator.standalone == true) {
 				// My app is installed and therefore fullscreen
-			}	
+			} else {
+
+			}
 		</script>
 
 		<!-- UPDATE Game path in src and gamePath constant -->
@@ -181,6 +236,11 @@
 
 		</script>
 	</div>
+	</div>
+
+	<div  id="download-app-ad">
+	<div><p>Add this webpage to your phone's home screen for the best experience.</p></div>
+	</div>				
 </body>
 
 </html>
