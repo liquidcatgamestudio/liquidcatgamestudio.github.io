@@ -52,6 +52,12 @@
 			position: fixed;
 		}
 
+		div#portrait-warning{
+			justify-content: center;
+			align-content: center;
+			size: 5vw;
+		}
+
 		@media (orientation: landscape) {
 			div#portrait-warning{
 				display: none;
@@ -63,7 +69,7 @@
 
 		@media (orientation: portrait) {
 			div#portrait-warning{
-				display: block;
+				display: flex;
 			}
 			div#gameContainer{
 				display: none;
@@ -80,7 +86,7 @@
 <!-- <div data-iframe="<iframe allowtransparency=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; msallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share&quot; id=&quot;game_drop&quot; src=&quot;https://html-classic.itch.zone/html/11139311/index.html&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; scrolling=&quo -->
 
 <body>
-	<div id="portrait-warning"><p>Please be in landscape mode to play thee game!</p></div>
+	<div id="portrait-warning"><p>Please be in landscape mode to play the game!</p></div>
 	<div id="gameContainer">
 		<!-- <button onclick="openFullscreen();">Open Video in Fullscreen Mode</button> -->
 
