@@ -40,19 +40,18 @@
         /* .unity-mobile .unity-mobile { width: 100%; height: 100% } */
         .unity-mobile { width: 100%; height: 100%; position: fixed; }
 	
-		#html5game {
-		   display:none;
-		}
+		
 	</style>
 </head>
 
+<!-- <div data-iframe="<iframe allowtransparency=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; msallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share&quot; id=&quot;game_drop&quot; src=&quot;https://html-classic.itch.zone/html/11139311/index.html&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; scrolling=&quo -->
 <body>
 	
 	<div id="gameContainer">
 		<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
 		<div style="height:100%" id="myvideo">
-			<iframe id="html5game"  style="display:none; width: 100%; height: 100%; border:0; " src="/momo.html" title="Momo Game"></iframe> 
+			<iframe id="html5game"  style="display:none; width: 100%; height: 100%; border:0; " src="/momo.html" title="Momo Game" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allow="autoplay; fullscreen *;" frameborder = "0" allowfullscreen = "true" scrolling="no"></iframe> 
 		</div>
 
 	
@@ -72,7 +71,12 @@
 			  }
 			}
 		</script>
-			
+		<style>
+			#html5game {
+		   display:none;
+		}
+		</style>
+		
 		<!-- UPDATE Game path in src and gamePath constant -->
 		<script src='BuildMomo/MomoBuild.loader.js'></script>
 		<script>
@@ -150,7 +154,7 @@
                 onResize();
                 });
 			onResize();
-			openFullscreen();
+			//openFullscreen();
            
 		</script>
 	</div>
