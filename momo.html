@@ -62,7 +62,7 @@
 			display: flex;
 			justify-content: center;
 			text-align: center;
-			width: 70%;
+			width: 100%;
 			/* height: auto; */
 			/* border: 3px solid #73AD21; */
 		}
@@ -116,14 +116,15 @@
 			}
 
 			div#download-app-ad {
-				position: absolute;
+				display: block;
+				/* position: absolute;
 				left: 0%;
 				right: 0%;
 				bottom: 0;
 				display: flex;
 				justify-content: center;
 				text-align: center;
-				width: 70%;
+				width: 70%; */
 				/* border: 3px solid red; */
 			}
 
@@ -163,12 +164,19 @@
 
 </head>
 <!-- https://stackoverflow.com/questions/76527631/unity-webgl-how-to-force-fullscreen-on-mobile-device -->
+ <!-- has white boxes for some reason -->
+<!-- <div id="myvideo"><iframe src="momo.html" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share" frameborder="0" allowfullscreen="true" scrolling="false"></iframe></div> -->
 
 
 <body>
 	
 	<div id="portrait-warning">
 		<p>Please be in landscape mode to play the game!</p>
+	</div>
+	<div id="download-app-ad">
+	
+		<p>Add this webpage to your phone's home screen for the best experience.</p>
+
 	</div>
 	<div id="game-window">
 		<div id="gameContainer">
@@ -269,11 +277,6 @@
 		</div>
 	</div>
 
-	<div id="download-app-ad">
-		<div>
-			<p>Add this webpage to your phone's home screen for the best experience.</p>
-		</div>
-	</div>
 </body>
 
 </html>
