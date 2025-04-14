@@ -18,7 +18,7 @@
 			color: aliceblue;
 			width: 100%;
 			height: 100%;
-			overflow: hidden;
+			overflow: visible;
 			padding: 0;
 			margin: 0;
 		}
@@ -101,7 +101,7 @@
 		@media not (display-mode: standalone) {
 			body {
 				display: flex;
-				overflow: auto;
+				/* overflow: auto; */
 				flex-direction: column;
 				justify-content: center;
 				text-align: center;
@@ -109,10 +109,19 @@
 
 			div#game-window {
 				display: block;
+				width: 96%;
+				padding: 2%;
 			}
 
 			div#gameContainer {
 				position: unset;
+			}
+
+			
+			.unity-mobile {
+			width: 100%;
+			height: auto;
+			position: fixed;
 			}
 
 			div#download-app-ad {
