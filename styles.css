@@ -1,5 +1,7 @@
 :root {
-    --main-bg-color: #011549;
+    /* 2d225f*/
+    --main-bg-color: #2e245c;
+    --main-bg-color-alt: #011549;
     --main-text-color: #ffffff;
     --main-text-color-alt: #8c8a90;
     --main-hyperlink-color: #80c8f4;
@@ -56,7 +58,6 @@ h2 {
 }
 .header-container{
     height: auto;
-    padding: 100px 0px 0px 0px;
 }
 
 .logo-top {
@@ -66,6 +67,13 @@ h2 {
 .mascot {
     width: 40%;
     height: 40%;
+    display: none;
+}
+.header-banner{
+    width: 100%;
+}
+.title-header{
+    display: none;
 }
 
 .nav-bar {
@@ -135,7 +143,7 @@ ul.nav-bar-ul li a:hover:not(.active) {
     margin: 0%;
     padding: 3%;
     color: var(--main-text-color-alt);
-    border: solid;
+    /* border: solid; */
    /* background-color: cornflowerblue; */
 }
 
@@ -204,15 +212,26 @@ ul.nav-bar-ul li a:hover:not(.active) {
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+    font-size: 1.3vw;
+    color: var(--main-text-color);
+}
+.event-content-inner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
     flex-direction: row;
+    margin: 2%;
 }
 
 .info-banner{
     width: 50%;
     height: 100%;
+    margin: 2%;
 }
 .event-info-card{
     width: 40%;
+    margin: 2%;
 }
 
 /*===========================footer================================*/
@@ -242,6 +261,10 @@ a {
       /*====event info page======*/
     .event-content{
         flex-direction: column;
+        font-size: 2vw;
+    }
+    .event-content-inner{
+        flex-direction: column;
     }
     .info-banner{
         width: 100%;
@@ -255,6 +278,14 @@ a {
 
 @media only screen and (max-width: 450px) {
 /*mobile only*/
+    body{
+        background-color: var(--main-bg-color-alt);
+    }
+
+    .header-container{
+        padding: 100px 0px 0px 0px;
+    }
+    
     h1 {
     font-size: 20vw;
     /*background-color: cornflowerblue;*/
@@ -263,8 +294,15 @@ a {
         padding: 0px;
     }
     .mascot{
+        display: block;
         width: 90%;
         height: auto;
+    }
+    .header-banner{
+        display: none;
+    }
+    .title-header{
+        display: block;
     }
 
     ul.nav-bar-ul li {
