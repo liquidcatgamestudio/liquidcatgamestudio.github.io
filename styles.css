@@ -1,5 +1,7 @@
 :root {
-    --main-bg-color: #011549;
+    /* 2d225f*/
+    --main-bg-color: #2e245c;
+    --main-bg-color-alt: #011549;
     --main-text-color: #ffffff;
     --main-text-color-alt: #8c8a90;
     --main-hyperlink-color: #80c8f4;
@@ -56,7 +58,6 @@ h2 {
 }
 .header-container{
     height: auto;
-    padding: 100px 0px 0px 0px;
 }
 
 .logo-top {
@@ -66,6 +67,13 @@ h2 {
 .mascot {
     width: 40%;
     height: 40%;
+    display: none;
+}
+.header-banner{
+    width: 100%;
+}
+.title-header{
+    display: none;
 }
 
 .nav-bar {
@@ -255,6 +263,14 @@ a {
 
 @media only screen and (max-width: 450px) {
 /*mobile only*/
+    body{
+        background-color: var(--main-bg-color-alt);
+    }
+
+    .header-container{
+        padding: 100px 0px 0px 0px;
+    }
+    
     h1 {
     font-size: 20vw;
     /*background-color: cornflowerblue;*/
@@ -263,8 +279,15 @@ a {
         padding: 0px;
     }
     .mascot{
+        display: block;
         width: 90%;
         height: auto;
+    }
+    .header-banner{
+        display: none;
+    }
+    .title-header{
+        display: block;
     }
 
     ul.nav-bar-ul li {
