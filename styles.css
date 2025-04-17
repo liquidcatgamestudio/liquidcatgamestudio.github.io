@@ -1,23 +1,29 @@
 :root {
-    --main-bg-color: #011549;
+    /* 2d225f*/
+    --main-bg-color: #2e245c;
+    --main-bg-color-alt: #011549;
     --main-text-color: #ffffff;
     --main-text-color-alt: #8c8a90;
     --main-hyperlink-color: #80c8f4;
+    --main-nav-bar-color: #04002b;
+    --main-nav-bar-color-alt: #fff;
+    --main-nav-bar-color-active: #9ec4e8;
 }
 
 
 html {
-    height: auto;%;
+    height: auto;
     margin: 0;
 }
 
 body {
-    height: auto%;
-    width: auto;
+    height: auto;
+    width: 100%;
     margin: 0px;
     background-color: var(--main-bg-color);
     background-size: auto;
     color: var(--main-text-color);
+    font-size: 100%;
 }
 
 div {
@@ -27,7 +33,7 @@ div {
 }
 
 .container {
-    height: auto%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,9 +41,13 @@ div {
     /*gap: 10px;*/
 }
 
+/* .title-header {
+    
+} */
+
 h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 6vw;
     /*background-color: cornflowerblue;*/
 }
 
@@ -47,8 +57,7 @@ h2 {
     /*background-color: cornflowerblue;*/
 }
 .header-container{
-    height: auto%;
-    padding: 100px 0px 0px 0px;
+    height: auto;
 }
 
 .logo-top {
@@ -58,6 +67,68 @@ h2 {
 .mascot {
     width: 40%;
     height: 40%;
+    display: none;
+}
+.header-banner{
+    width: 100%;
+}
+.title-header{
+    display: none;
+}
+
+.nav-bar {
+    margin: 10px;
+}
+
+ul.nav-bar-ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-nav-bar-color);
+    text-align:center;
+    overflow: hidden;
+}
+
+ul.nav-bar-ul li {
+    float: left;
+    width: 25%;
+}
+
+ul.nav-bar-ul li a {
+    display: block;
+    color: var(--main-text-color);
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+
+ul.nav-bar-ul li a.active {
+
+  background-color: var(--main-nav-bar-color-active);
+  color: var(--main-nav-bar-color);
+
+}
+
+ul.nav-bar-ul li a:hover:not(.active) {
+    background-color: var( --main-nav-bar-color-alt);
+    color: black;
+}      
+
+/*=========================BODY CONTENT====================================*/
+
+@keyframes appear {
+    from {
+        opacity: 0.5;/*New setting*/
+        scale: 0.7;
+        /* transform: translateX(-100px); */
+        /* clip-path: inset(100% 100% 0); */
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        /* transform: translateX(0px); */
+        /* clip-path: inset(0 0 0); */
+    }
 }
 
 .body-content{
@@ -65,16 +136,105 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-/*    border: solid;*/
+    /* border: solid; */
 }
 
 .content {
     margin: 0%;
     padding: 3%;
     color: var(--main-text-color-alt);
-/*    border: solid;*/
-/*    background-color: cornflowerblue;*/
+    /* border: solid; */
+   /* background-color: cornflowerblue; */
 }
+
+.content .view {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.content .block{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.block .event-banner {
+    width: 100%;
+}
+
+/*===========================PROJECT================================*/
+
+.project-cards-container {
+    background-color: var(--main-nav-bar-color);
+    padding: 1%;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: var(--main-nav-bar-color-active);
+    width: 25%;
+    max-width: 300px;
+    min-width: 350px;
+    margin: 1%;
+    padding: 3%;
+}
+
+.project-card #game-name {
+    font-size: 3vw;
+    color: var(--main-bg-color);
+}
+
+.project-card-button {
+    background-color: var(--main-bg-color);
+    border-radius: 10%;
+    padding: 15%;
+    margin: 5%;
+    color: var(--main-nav-bar-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.project-card-button a{
+    width: 100%;
+    font-size: 2vw;
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+/*===========================Event full info page================================*/
+.event-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1.3vw;
+    color: var(--main-text-color);
+}
+.event-content-inner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    margin: 2%;
+}
+
+.info-banner{
+    width: 50%;
+    height: 100%;
+    margin: 2%;
+}
+.event-info-card{
+    width: 40%;
+    margin: 2%;
+}
+
+/*===========================footer================================*/
 
 .links-container {
     display: flex;
@@ -96,21 +256,76 @@ a {
     align-content: center;
 }
 
+@media only screen and (max-width: 1024px) {
+    /* smaller screens */
+      /*====event info page======*/
+    .event-content{
+        flex-direction: column;
+        font-size: 2vw;
+    }
+    .event-content-inner{
+        flex-direction: column;
+    }
+    .info-banner{
+        width: 100%;
+    }
+
+    .event-info-card{
+        width: 100%;
+    }
+}
+
 
 @media only screen and (max-width: 450px) {
 /*mobile only*/
+    body{
+        background-color: var(--main-bg-color-alt);
+    }
+
+    .header-container{
+        padding: 100px 0px 0px 0px;
+    }
+    
     h1 {
-    font-size: 2.5em;
+    font-size: 20vw;
     /*background-color: cornflowerblue;*/
     }   
     .container{
         padding: 0px;
     }
     .mascot{
+        display: block;
         width: 90%;
         height: auto;
     }
+    .header-banner{
+        display: none;
+    }
+    .title-header{
+        display: block;
+    }
 
+    ul.nav-bar-ul li {
+        float: none;
+        width: 90%;
+    }   
+
+    ul.nav-bar-ul li a {
+        width: 100%;
+    }
+    /* Change the link color on hover */
+
+    .project-card #game-name {
+        font-size: 10vw;
+    }
+
+    .project-card-button a{
+        font-size: 10vw;
+    }
+
+  
+
+   
 /* 
 common breakpoints for widths of devices  
 320px — 480px: Mobile devices
