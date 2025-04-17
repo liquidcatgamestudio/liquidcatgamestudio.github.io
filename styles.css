@@ -120,8 +120,25 @@ ul.nav-bar-ul li a:hover:not(.active) {
     margin: 0%;
     padding: 3%;
     color: var(--main-text-color-alt);
-/*    border: solid;*/
-/*    background-color: cornflowerblue;*/
+    /* border: solid; */
+   /* background-color: cornflowerblue; */
+}
+
+.content .view {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.content .block{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.block .event-banner {
+    width: 100%;
 }
 
 /*===========================PROJECT================================*/
@@ -167,6 +184,32 @@ ul.nav-bar-ul li a:hover:not(.active) {
     text-decoration: none;
 }
 
+/*===========================Event full info page================================*/
+.event-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1.3vw;
+    color: var(--main-text-color);
+}
+.event-content-inner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    margin: 2%;
+}
+
+.info-banner{
+    width: 50%;
+    height: 100%;
+    margin: 2%;
+}
+.event-info-card{
+    width: 40%;
+    margin: 2%;
+}
 
 /*===========================footer================================*/
 
@@ -188,6 +231,25 @@ a {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    /* smaller screens */
+      /*====event info page======*/
+    .event-content{
+        flex-direction: column;
+        font-size: 2vw;
+    }
+    .event-content-inner{
+        flex-direction: column;
+    }
+    .info-banner{
+        width: 100%;
+    }
+
+    .event-info-card{
+        width: 100%;
+    }
 }
 
 
@@ -222,6 +284,9 @@ a {
     .project-card-button a{
         font-size: 10vw;
     }
+
+  
+
    
 /* 
 common breakpoints for widths of devices  
