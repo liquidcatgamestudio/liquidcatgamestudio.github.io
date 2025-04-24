@@ -22,8 +22,8 @@
             <section class="navigation-container">
                 <div class="nav-bar">
                     <ul class="nav-bar-ul">
-                      <li><a class="active" href="index.html">About</a></li>
-                      <li><a href="projects.html">Projects</a></li>
+                      <li><a href="index.html">About</a></li>
+                      <li><a class="active" href="projects.html">Projects</a></li>
                       <li><a href="contact.html">Socials</a></li>
                       <li><a href="about.html">Team</a></li>
                     </ul>
@@ -34,13 +34,13 @@
                     <!-- ======================================= -->
                     <div id="gameContainer">
                         <canvas id="unity-canvas" data-pixel-art=""></canvas>
-                        <script src="Build/community game build webgl.loader.js"></script>
+                        <script src="BuildCommunity/community game build webgl.loader.js"></script>
                         <script>
                             var canvas = document.querySelector("#unity-canvas");
                             var config = {
-                                dataUrl: "Build/community game build webgl.data",
-                                frameworkUrl: "Build/community game build webgl.framework.js",
-                                codeUrl: "Build/community game build webgl.wasm",
+                                dataUrl: "BuildCommunity/community game build webgl.data",
+                                frameworkUrl: "BuildCommunity/community game build webgl.framework.js",
+                                codeUrl: "BuildCommunity/community game build webgl.wasm",
                                 streamingAssetsUrl: "StreamingAssets",
                                 companyName: "SandraTrinh",
                                 productName: "CommunityCentreGame",
