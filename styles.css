@@ -178,31 +178,45 @@ ul.nav-bar-ul li a:hover:not(.active) {
 
 .project-card {
     background-color: var(--main-nav-bar-color-active);
+    position: relative;
     width: 25%;
     max-width: 300px;
     min-width: 350px;
-    margin: 1%;
-    padding: 3%;
+    margin: 0 auto;
+    /* padding: 3%; */
+}
+
+.project-card-image{
+    width: 100%;
+}
+
+.project-card-content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+   /* padding: 20px;  Some padding */
 }
 
 .project-card #game-name {
-    font-size: 3vw;
+    font-size: 1vw;
     color: var(--main-bg-color);
 }
 
 .project-card-button {
-    background-color: var(--main-bg-color);
-    border-radius: 10%;
-    padding: 15%;
-    margin: 5%;
+    /* background-color: var(--main-bg-color); */
+    margin: 0%;
+    padding: 5%;
     color: var(--main-nav-bar-color);
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: center; 
 }
 .project-card-button a{
-    width: 100%;
-    font-size: 2vw;
+    /* width: 100%; */
+    font-size: 1vw;
     color: var(--main-text-color);
     text-decoration: none;
 }
@@ -273,6 +287,10 @@ a {
     .event-info-card{
         width: 100%;
     }
+
+    .project-card-button a{
+        font-size: 2.5vw;
+    } 
 }
 
 
@@ -316,14 +334,13 @@ a {
     /* Change the link color on hover */
 
     .project-card #game-name {
-        font-size: 10vw;
+        /* font-size: 10vw; */
     }
 
     .project-card-button a{
-        font-size: 10vw;
-    }
+        font-size: 4vw;
+    } 
 
-  
 
    
 /* 
