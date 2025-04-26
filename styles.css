@@ -227,7 +227,7 @@ ul.nav-bar-ul li a:hover:not(.active) {
     justify-content:space-around;
     text-align:center;
     flex-direction: column;
-    font-size: 1.3vw;
+    font-size: 2vw;
     color: var(--main-text-color);
 }
 .event-content-inner{
@@ -244,6 +244,10 @@ ul.nav-bar-ul li a:hover:not(.active) {
 }
 .event-info-card{
     width: 40%;
+}
+
+#event-detail{
+    font-size: 1.7vw;
 }
 
 /*===========================footer================================*/
@@ -277,15 +281,24 @@ a {
     }
     .event-content-inner{
         flex-direction: column;
+        margin-bottom: 0;
     }
     .info-banner{
         width: 100%;
     }
+    /*  Event info page */
 
     .event-info-card{
         width: 100%;
-        margin: 2vw 0px 2vw 0px;
+        margin: 2vw 0px 0px 0px;
     }
+
+    #event-detail{
+        font-size: 3vw;
+        margin-top: 0;
+    }
+
+    /* Project page */
 
     .project-card-button a{
         font-size: 2.5vw;
@@ -346,7 +359,10 @@ a {
         background-color: var(--main-bg-color);
         font-size: 5vw;
     }
-
+    #event-detail{
+        font-size: 4vw;
+        margin-top: 0;
+    }
     
 
 
