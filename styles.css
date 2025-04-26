@@ -227,7 +227,7 @@ ul.nav-bar-ul li a:hover:not(.active) {
     justify-content:space-around;
     text-align:center;
     flex-direction: column;
-    font-size: 1.3vw;
+    font-size: 2vw;
     color: var(--main-text-color);
 }
 .event-content-inner{
