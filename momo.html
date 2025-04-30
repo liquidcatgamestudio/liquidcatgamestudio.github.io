@@ -29,6 +29,8 @@
 			display: flex;
 			flex-direction: column;
 			justify-self: center;
+
+			top: 80px;
 		}
 		/* .unity-mobile .unity-mobile { width: 100%; height: 100% } */
 		.unity-mobile {
@@ -74,6 +76,7 @@
 
 			div#game-window {
 				display: block;
+				
 			}
 			
 		}
@@ -149,7 +152,13 @@
 			div#download-app-ad {
 				display: block;
 			}
+			div#game-window {
+				width: 80%;
+        		padding: 10%;
+       			padding-top: 20%;
+			}
 		}
+
 		@media (display-mode: standalone) {
 			div#download-app-ad {
 				display: none;
@@ -170,8 +179,10 @@
 			}
 		}	
 		html, body {
-  min-width: 100%;
-  min-height: 100%;}	
+  			min-width: 100%;
+  			min-height: 100%;
+
+	}	
 	</style>
 
 </head>
@@ -185,6 +196,7 @@
 	<div id="portrait-warning">
 		<p>Please be in landscape mode to play the game!</p>
 	</div>
+
 	
 	<div id="game-window">
 		<div id="gameContainer">
@@ -272,7 +284,7 @@
 					canvas = instance.Module.canvas;
 					onResize();
 				});
-				//window.scrollTo(0, 1);
+				window.scrollTo(0, 1);
 				window.addEventListener('resize', () => {
 					//window.location.reload();
 					onResize();
