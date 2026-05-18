@@ -1,6 +1,6 @@
- {
-    "short_name": "Peach Beach!",
-    "name": "Peach Beach! THE GAME",
+{
+    "short_name": "Winter Fest",
+    "name": "Winter Fest! THE GAME",
     "icons": [
       {
         "src": "img/momo-icon-small.png",
@@ -8,7 +8,7 @@
         "type": "image/png"
       }
     ],
-    "start_url": "/momo.html",
+    "start_url": "/momoTest.html",
        "display": "standalone",
     "orientation": "landscape"
   }
