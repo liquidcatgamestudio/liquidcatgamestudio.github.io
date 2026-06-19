@@ -221,16 +221,16 @@
 			</script>
 
 			<!-- UPDATE Game path in src and gamePath constant -->
-			<script src='BuildMomoIce/game.loader.js'></script>
+			<script src='Game/BuildMomoIce/game.loader.js'></script>
 			<script>
-				const gamePath = 'BuildMomoIce/game';
+				const gamePath = 'Game/BuildMomoIce/game';
 				var canvas = document.querySelector("#unity-canvas");
 				var container = canvas.parentElement;
 				var config = {
 					dataUrl: `${gamePath}.data`,
 					frameworkUrl: `${gamePath}.framework.js`,
 					codeUrl: `${gamePath}.wasm`,
-					streamingAssetsUrl: "StreamingAssets",
+					streamingAssetsUrl: "Game/StreamingAssets",
 					companyName: "LiquidCatStudio",
 					productName: "Momo Winter Fest 2026",
 					productVersion: "0.1",
