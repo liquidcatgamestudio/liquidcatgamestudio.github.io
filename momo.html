@@ -221,16 +221,16 @@
 			</script>
 
 			<!-- UPDATE Game path in src and gamePath constant -->
-			<script src='BuildMomo/MomoBuild.loader.js'></script>
+			<script src='Game/BuildMomo/MomoBuild.loader.js'></script>
 			<script>
-				const gamePath = 'BuildMomo/MomoBuild';
+				const gamePath = 'Game/BuildMomo/MomoBuild';
 				var canvas = document.querySelector("#unity-canvas");
 				var container = canvas.parentElement;
 				var config = {
 					dataUrl: `${gamePath}.data`,
 					frameworkUrl: `${gamePath}.framework.js`,
 					codeUrl: `${gamePath}.wasm`,
-					streamingAssetsUrl: "StreamingAssets",
+					streamingAssetsUrl: "Game/StreamingAssets",
 					companyName: "LiquidCatStudio",
 					productName: "Momo Art Mart Game",
 					productVersion: "0.1",
