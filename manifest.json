@@ -8,7 +8,7 @@
         "type": "image/png"
       }
     ],
-    "start_url": "/momo.html",
+    "start_url": "/momoTest.html",
        "display": "standalone",
     "orientation": "landscape"
   }

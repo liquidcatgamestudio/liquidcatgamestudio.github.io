@@ -1,6 +1,6 @@
 {
-    "short_name": "Winter Fest",
-    "name": "Winter Fest! THE GAME",
+    "short_name": "Skates On!",
+    "name": "Momo Frost Fest Game: Skates On!",
     "icons": [
       {
         "src": "img/momo-icon-small.png",
@@ -8,7 +8,7 @@
         "type": "image/png"
       }
     ],
-    "start_url": "/momoTest.html",
+    "start_url": "/momo.html",
        "display": "standalone",
     "orientation": "landscape"
   }
